@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+	margin: 0;
+}
+
+* {
+	box-sizing: border-box;
+	/* -webkit-font-smoothing: antialiased; */
+	/* -moz-osx-font-smoothing: grayscale; */
+
+	font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+}
+
+::-webkit-scrollbar {
+	width: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background-color: rgb(45, 212, 191, 1);
+}
+
+::-webkit-scrollbar-track {
+	background-color: rgba(0, 0, 0, 0.3);
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: rgb(45, 212, 191, 0.3);
+	border-radius: 4px;
+}
+
+@media only screen and (min-width:720px) {
+	::-webkit-scrollbar {
+		width: 10px;
+	}
+}
+
+
+.bg-graphic {
+	position: fixed;
+	top: 60vh;
+	left: -40vw;
+	width: 200vw;
+	height: 200vw;
+	border-radius: 80vw;
+	animation: bg-spin 20s infinite linear;
+	background-color: rgba(255, 255, 255, 0.1);
+	z-index: 2;
+}
+
+.bg-graphic-1 {
+	left: -50vw;
+	border-radius: 85vw;
+	background-color: rgba(255, 100, 100, 0.1);
+}
+
+.bg-graphic-2 {
+	left: -60vw;
+	border-radius: 95vw;
+	background-color: rgba(100, 100, 255, 0.1);
+}
+
+.bg-graphic-3 {
+	animation: bg-spin-reverse 20s infinite linear;
+	left: -40vw;
+	border-radius: 85vw;
+	background-color: rgba(100, 255, 100, 0.1);
+}
+
+@keyframes bg-spin {
+	60% {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes bg-spin-reverse {
+	40% {
+		transform: rotate(-360deg);
+	}
+}
+
+
+.smooth-fade:after {
+	position: absolute;
+	content: "";
+	width: 100%;
+	height: 150px;
+	bottom: 0;
+	background: linear-gradient(rgba(0,0,0,0), #000);
+}
